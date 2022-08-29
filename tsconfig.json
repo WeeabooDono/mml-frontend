@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -23,7 +22,7 @@
     "paths": {
       "@env": ["src/environments/environment"],
       "@shared/*": ["src/app/_shared/*"],
-      "@core/*": ["src/app/_core/*"],
+      "@core/*": ["src/app/_core/*"]
     }
   },
   "angularCompilerOptions": {
@@ -31,6 +30,6 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "strictPropertyInitialization": false,
+    "strictPropertyInitialization": false
   }
 }
