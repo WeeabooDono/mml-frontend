@@ -1,0 +1,7 @@
+<div class="side-menu">
+  <mat-nav-list>
+    <ng-container *ngFor="let menu of menus">
+      <a mat-list-item [href]="menu.link">{{ menu.name }}</a>
+    </ng-container>
+  </mat-nav-list>
+</div>
