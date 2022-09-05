@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ThemeService } from '@core/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -16,4 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
 })
 export class AppComponent {
+
+  constructor(private readonly themeService: ThemeService) {
+    this.themeService.init();
+  }
 }

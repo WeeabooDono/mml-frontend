@@ -1,0 +1,39 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$main-light-primary: mat.define-palette(mat.$indigo-palette);
+$main-light-accent: mat.define-palette(mat.$pink-palette);
+$main-light-warn: mat.define-palette(mat.$red-palette);
+
+$main-light-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $main-light-primary,
+        accent: $main-light-accent,
+        warn: $main-light-warn
+      )
+    )
+);
+
+$main-dark-primary: mat.define-palette(mat.$pink-palette);
+$main-dark-accent: mat.define-palette(mat.$blue-gray-palette);
+$main-dark-warn: mat.define-palette(mat.$red-palette);
+
+$main-dark-theme: mat.define-dark-theme(
+    (
+      color: (
+        primary: $main-dark-primary,
+        accent: $main-dark-accent,
+        warn: $main-dark-warn
+      )
+    )
+);
+
+@include mat.all-component-themes($main-light-theme);
+
+.main-dark-theme {
+  // Use color instead of theme to not duplicate the theme code
+  // https://github.com/angular/components/blob/master/guides/duplicate-theming-styles.md
+  @include mat.all-component-colors($main-dark-theme);
+}
